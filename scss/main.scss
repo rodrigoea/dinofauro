@@ -1,0 +1,217 @@
+//
+// Command line to compile
+// sass --watch main.scss:../css/main.css
+//
+
+
+/*
+	MIXINS
+*/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition() {
+  -webkit-transition: all 300ms ease;
+     -moz-transition: all 300ms ease;
+      -ms-transition: all 300ms ease;
+          transition: all 300ms ease;
+}
+
+
+/*
+	STYLES
+*/
+
+*:focus{
+	outline: none;
+}
+
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #2b9ed8;
+	font-family: 'Bowlby One SC', cursive;
+	color: white;
+
+}
+
+.entry-header{
+	padding: 30px 0;
+}
+
+.img-dino{
+	text-align: center;
+	display: table;
+	margin: auto;
+
+	@media (max-width: 767px) {
+		padding: 0;
+	}
+
+	h1{
+		font-size: 64px;
+		letter-spacing: 2px;
+		text-align: center;
+		font-family: 'Bowlby One SC', cursive;
+		text-shadow: 0 1px 0 #aaa, 0 2px 0 #aaa, 0 3px 0 #aaa, 0 4px 0 #aaa, 0 5px 0 #aaa, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, .4);
+		margin: 0 0 40px;
+
+		@media (max-width: 767px) {
+			font-size: 30px;
+		}
+	}
+
+	img{
+		display: inherit;
+		margin: auto;
+
+		@media (max-width: 767px) {
+			width: 100px;
+		}
+	}
+}
+
+.box-text{
+
+	textarea{
+		width: 100%;
+		@include border-radius(3px);
+		border: none;
+		background: white;
+		font-size: 24px;
+		font-family: 'Bowlby One SC', cursive;
+		color: #1c1c1c;
+		padding: 30px 60px;
+		resize: none;
+		letter-spacing: 1px;
+		text-align: center;
+		@include transition();
+		display: inline-block;
+		vertical-align: middle;
+
+		&:focus{
+			box-shadow: 0 6px 30px -5px #222;
+		}
+
+		@media (max-width: 767px) {
+			min-height: 200px;
+		}
+
+		@media (max-width: 991px) {
+			padding: 20px;
+			font-size: 20px;
+		}
+	}
+
+	.btns{
+		display: table;
+		margin: auto;
+		text-align: center;
+
+		button{
+			@include transition();
+			border: none;
+			background: #666;
+			color: white;
+			padding: 20px 60px;
+			font-size: 24px;
+			font-family: 'Bowlby One SC', cursive;
+			text-transform: uppercase;
+			font-weight: 800;
+			cursor: pointer;
+			margin: 30px auto 0;
+			display: inline-block;
+			letter-spacing: 2px;
+			margin-right: 10px;
+			border-bottom: 4px solid transparent;
+			border-left: 4px solid transparent;
+
+			@media (max-width: 767px) {
+				padding: 10px 30px;
+				margin: 20px 15px 0 0;
+			}
+
+			&.play{
+				background-color: #46A923;
+				border-color: darken(#46A923, 20%);
+
+				&:focus, &:hover{
+					border-color: #46A923;
+					box-shadow: 0 3px 5px -2px #333;
+				}
+			}
+
+			&.stop{
+				background-color: #BF0F17;
+				border-color: darken(#BF0F17, 20%);
+
+				&:focus, &:hover{
+					border-color: #BF0F17;
+					box-shadow: 0 3px 5px -2px #333;
+				}
+			}
+		}
+	}
+}
+
+.footer{
+	padding: 20px 0 20px;
+
+	.share{
+		display: table;
+		text-align: center;
+		margin: auto;
+
+		.share-title{
+			color: #fff;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+			text-shadow: 0 1px 0 #aaa, 0 2px 0 #aaa, 0 5px 10px rgba(0, 0, 0, .4);
+			margin-bottom: 10px;
+		}
+
+		.fb-share-button, .btn-twitter{
+			display: inline-block;
+			margin-right: 20px;
+
+			&:last-child{
+				margin: 0;
+			}
+		}
+
+		.btn-twitter{
+			position: relative;
+			top: 7px;
+		}
+	}
+
+	.by{
+		font-size: 14px;
+		text-align: center;
+		color: #000;
+		font-family: "Arial Black";
+		letter-spacing: -1px;
+		margin-top: 30px;
+
+
+		@media (max-width: 767px) {
+			font-size: 12px;
+		}
+
+		a{
+			color: #000;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}

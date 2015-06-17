@@ -1,0 +1,151 @@
+/*
+	MIXINS
+*/
+/*
+	STYLES
+*/
+*:focus {
+  outline: none; }
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #2b9ed8;
+  font-family: 'Bowlby One SC', cursive;
+  color: white; }
+
+.entry-header {
+  padding: 30px 0; }
+
+.img-dino {
+  text-align: center;
+  display: table;
+  margin: auto; }
+  @media (max-width: 767px) {
+    .img-dino {
+      padding: 0; } }
+  .img-dino h1 {
+    font-size: 64px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'Bowlby One SC', cursive;
+    text-shadow: 0 1px 0 #aaaaaa, 0 2px 0 #aaaaaa, 0 3px 0 #aaaaaa, 0 4px 0 #aaaaaa, 0 5px 0 #aaaaaa, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+    margin: 0 0 40px; }
+    @media (max-width: 767px) {
+      .img-dino h1 {
+        font-size: 30px; } }
+  .img-dino img {
+    display: inherit;
+    margin: auto; }
+    @media (max-width: 767px) {
+      .img-dino img {
+        width: 100px; } }
+
+.box-text textarea {
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background: white;
+  font-size: 24px;
+  font-family: 'Bowlby One SC', cursive;
+  color: #1c1c1c;
+  padding: 30px 60px;
+  resize: none;
+  letter-spacing: 1px;
+  text-align: center;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  transition: all 300ms ease;
+  display: inline-block;
+  vertical-align: middle; }
+  .box-text textarea:focus {
+    box-shadow: 0 6px 30px -5px #222; }
+  @media (max-width: 767px) {
+    .box-text textarea {
+      min-height: 200px; } }
+  @media (max-width: 991px) {
+    .box-text textarea {
+      padding: 20px;
+      font-size: 20px; } }
+.box-text .btns {
+  display: table;
+  margin: auto;
+  text-align: center; }
+  .box-text .btns button {
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    transition: all 300ms ease;
+    border: none;
+    background: #666;
+    color: white;
+    padding: 20px 60px;
+    font-size: 24px;
+    font-family: 'Bowlby One SC', cursive;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 30px auto 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent; }
+    @media (max-width: 767px) {
+      .box-text .btns button {
+        padding: 10px 30px;
+        margin: 20px 15px 0 0; } }
+    .box-text .btns button.play {
+      background-color: #46A923;
+      border-color: #235512; }
+      .box-text .btns button.play:focus, .box-text .btns button.play:hover {
+        border-color: #46A923;
+        box-shadow: 0 3px 5px -2px #333; }
+    .box-text .btns button.stop {
+      background-color: #BF0F17;
+      border-color: #60080c; }
+      .box-text .btns button.stop:focus, .box-text .btns button.stop:hover {
+        border-color: #BF0F17;
+        box-shadow: 0 3px 5px -2px #333; }
+
+.footer {
+  padding: 20px 0 20px; }
+  .footer .share {
+    display: table;
+    text-align: center;
+    margin: auto; }
+    .footer .share .share-title {
+      color: #fff;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 #aaaaaa, 0 2px 0 #aaaaaa, 0 5px 10px rgba(0, 0, 0, 0.4);
+      margin-bottom: 10px; }
+    .footer .share .fb-share-button, .footer .share .btn-twitter {
+      display: inline-block;
+      margin-right: 20px; }
+      .footer .share .fb-share-button:last-child, .footer .share .btn-twitter:last-child {
+        margin: 0; }
+    .footer .share .btn-twitter {
+      position: relative;
+      top: 7px; }
+  .footer .by {
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    font-family: "Arial Black";
+    letter-spacing: -1px;
+    margin-top: 30px; }
+    @media (max-width: 767px) {
+      .footer .by {
+        font-size: 12px; } }
+    .footer .by a {
+      color: #000; }
+      .footer .by a:hover {
+        text-decoration: none; }
